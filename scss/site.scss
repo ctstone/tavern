@@ -1,0 +1,114 @@
+body {
+  &.test-1 {
+    background-image: url(../img/_MG_6450_1440.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    * {
+      color:white;
+    }
+  }
+
+  &.test-2 {
+    background-image: url(../img/bg/1/dark_wall.png);
+    * {
+      color:white;
+    }
+
+    h2, .active {
+      color: #ED0F66;
+    }
+
+    a {
+      color:white;
+      &:hover {
+        color:#ED0F66;
+      }
+    }
+
+    .bg-img {
+      background-repeat: no-repeat;
+      background-position-y: 50%;
+      text-align: center;
+      padding:5% 0;
+      font-size:42px;
+      font-weight:900;
+      margin-bottom:42px;
+      min-height:350px;
+      overflow: hidden;
+      text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+      h2 {
+        font-size: 56px;
+      }
+    }
+
+    .bg-img-1 {
+      background-image: url(../img/_MG_6450_1440.jpg);
+      background-position: 75% 75%;
+    }
+    .bg-img-2 {
+      background-image: url(../img/_MG_6486_1440.jpg);
+    }
+    .bg-img-3 {
+      background-image: url(../img/_MG_6482_1440.jpg);
+      background-position: 10% 50%;
+      background-attachment: fixed;
+      font-size:32px;
+    }
+
+    .bg-img-4 {
+      background-image: url(../img/2016-02-18_10-14-33.jpg);
+      background-attachment: fixed;
+      background-position: 0;
+      background-size: cover;
+      font-size:32px;
+    }
+
+    .bg-img-5 {
+      background-image: url(../img/_MG_6469_1440.jpg);
+      background-attachment: fixed;
+      background-position: 0 0;
+      background-size: cover;
+      font-size:32px;
+    }
+
+    .bg-img-6 {
+      background-image: url(../img/_MG_6461_1440.jpg);
+      background-attachment: fixed;
+      background-position: 0 0;
+      background-size: cover;
+      background-position: 0 30%;
+      font-size:32px;
+      height:600px;
+    }
+
+    .bg-img-7 {
+      background-image: url(../img/_MG_6454_1440.jpg);
+      background-attachment: fixed;
+      background-position: 0 0;
+      background-size: cover;
+      background-position: 20 45%;
+      font-size:32px;
+      height:600px;
+    }
+
+    .bg-img-8 {
+      background-image: url(../img/_MG_6476_1440.jpg);
+      background-attachment: fixed;
+      background-position: 0 0;
+      background-size: cover;
+      background-position: 20 45%;
+      font-size:32px;
+      height:600px;
+    }
+
+    .ho-menu {
+      font-size:24px;
+    }
+  }
+}
