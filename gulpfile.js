@@ -46,7 +46,7 @@ gulp.task('package', ['build'], function() {
 });
 
 gulp.task('install', ['build'], function() {
-  return gulp.src('build/**').pipe(gulp.dest('/http/ww14'));
+  return gulp.src('build/**').pipe(gulp.dest('/http/ww8081'));
 });
 
 gulp.task('watch', ['install'], function() {
