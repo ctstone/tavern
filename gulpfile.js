@@ -1,6 +1,7 @@
 var gulp = require('gulp')
   , sass = require('gulp-sass')
-  , zip = require('gulp-zip');
+  , zip = require('gulp-zip')
+  , include = require('gulp-include');
 
 gulp.task('res.css', function() {
   return gulp.src('scss/**/*.scss')
@@ -36,7 +37,10 @@ gulp.task('dep.fonts', function() {
 gulp.task('dep', ['dep.js', 'dep.css', 'dep.fonts']);
 
 gulp.task('build', ['res', 'dep'], function() {
-  return gulp.src('www/**').pipe(gulp.dest('build'));
+  return gulp.src('www/[^_]**')
+    .pipe(include())
+    .on('error', console.error)
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('package', ['build'], function() {

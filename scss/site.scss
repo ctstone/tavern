@@ -10,6 +10,9 @@ body {
   }
 
   &.test-2 {
+    .ho-fg {
+      color:#B6212D;
+    }
     background-image: url(../img/bg/1/dark_wall.png);
     * {
       color:white;
@@ -30,7 +33,7 @@ body {
       background-repeat: no-repeat;
       background-position-y: 50%;
       text-align: center;
-      padding:5% 0;
+      // padding:5% 0;
       font-size:42px;
       font-weight:900;
       margin-bottom:42px;
@@ -109,6 +112,19 @@ body {
 
     .ho-menu {
       font-size:24px;
+      margin:0;
+    }
+    .ho-social {
+      text-align: left;
+      
+      .fa {
+        color:#B6212D;
+      }
+      
+      @media (min-width: 1200px) {
+        text-align:right;
+        margin-top:-30px;
+      }
     }
   }
 }
