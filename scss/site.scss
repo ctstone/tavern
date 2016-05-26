@@ -24,9 +24,19 @@ body {
 
     a {
       color:white;
+      color:#B6212D;
       &:hover {
         color:#ED0F66;
+        color:#B6212D;
       }
+    }
+    
+    .page-menu .ho-menu > .menu-menu,
+    .page-location .ho-menu > .menu-location,
+    .page-contact .ho-menu > .menu-contact,
+    .page-events .ho-menu > .menu-events,
+    .page-press .ho-menu > .menu-press {
+      text-decoration: underline;
     }
 
     .bg-img {
@@ -112,10 +122,13 @@ body {
 
     .ho-menu {
       font-size:24px;
-      margin:0;
+      margin-top:20px;
+      margin-bottom:0;
     }
     .ho-social {
       text-align: left;
+      font-size:32px;
+      margin:0;
       
       .fa {
         color:#B6212D;
@@ -123,7 +136,8 @@ body {
       
       @media (min-width: 1200px) {
         text-align:right;
-        margin-top:-30px;
+        margin-top:-60px;
+        font-size:60px;
       }
     }
   }
