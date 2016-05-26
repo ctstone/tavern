@@ -51,7 +51,8 @@ body {
 .page-home {
   .bg-img {
     background-image: url(../img/_MG_6450_1440.jpg);
-    background-position: 75% 75%;
+    background-attachment: fixed;
+    // background-position: 75% 75%;
   }
 }
 
@@ -101,7 +102,7 @@ body {
 
 .bg-img {
   background-repeat: no-repeat;
-  background-position-y: 50%;
+  // background-position-y: 50%;
   text-align: center;
   padding:5% 0;
   font-weight:900;
