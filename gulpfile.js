@@ -36,7 +36,11 @@ gulp.task('dep.fonts', function() {
 });
 gulp.task('dep', ['dep.js', 'dep.css', 'dep.fonts']);
 
-gulp.task('build', ['res', 'dep'], function() {
+gulp.task('files', function() {
+  return gulp.src('files/**').pipe(gulp.dest('files', {cwd:'build'}))
+});
+
+gulp.task('build', ['res', 'dep', 'files'], function() {
   return gulp.src('www/[^_]**')
     .pipe(include())
     .on('error', console.error)
