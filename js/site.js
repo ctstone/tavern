@@ -1,7 +1,7 @@
 $(document).on('ready', function() {
   var now = moment();
   
-  $('.ho-hours u').each(function() {
+  $('.ho-hours li').each(function() {
     var elem = $(this)
       , dateOpen = new Date()
       , dateClose = new Date()
@@ -22,12 +22,16 @@ $(document).on('ready', function() {
       isOpen = now >= open && now < close;
       
       if (isOpen) {
-        $('<i class="fa fa-arrow-circle-right" style="margin-right:6px;"></i>').insertBefore(elem);
+        elem
+          .prepend('<i class="fa fa-arrow-circle-right" style="margin-right:6px;"></i>')
+          .append('<i class="fa fa-arrow-circle-left" style="margin-left:6px;"></i>');
       }
     });
     
     if (!isOpen && schedule.days.indexOf(now.day()) != -1) {
-      $('<i class="fa fa-arrow-circle-right" style="margin-right:6px;"></i>').insertBefore(elem);
+      elem
+        .prepend('<i class="fa fa-arrow-circle-right" style="margin-right:6px;"></i>')
+        .append('<i class="fa fa-arrow-circle-left" style="margin-left:6px;"></i>');
     }
     
   });
