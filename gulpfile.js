@@ -16,6 +16,7 @@ gulp.task('res', ['res.css'], function() {
 gulp.task('dep.js', function() {
   return gulp.src([
     'bootstrap/dist/js/bootstrap?(.min).js',
+    'moment/min/moment.min.js',
     'jquery/dist/jquery?(.min).js'], {cwd:'bower_components'})
 		.pipe(gulp.dest('lib/js', {cwd:'build'}));
 });

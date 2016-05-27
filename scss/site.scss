@@ -10,7 +10,8 @@ body {
     }
   }
   h2, .active {
-    color: #ED0F66;
+    // color: #ED0F66;
+    color:#B6212D;
   }
 }
 
@@ -34,6 +35,10 @@ body {
     background-position: 10% 50%;
     background-attachment: fixed;
     font-size:32px;
+    padding-top:0;
+  }
+  a:hover {
+    text-decoration: none;
   }
   p {
     b {
