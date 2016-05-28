@@ -10,14 +10,12 @@ body {
     }
   }
   h2, .active {
-    // color: #ED0F66;
     color:#B6212D;
   }
 }
 
 .page-menu .ho-menu > .menu-menu,
 .page-location .ho-menu > .menu-location,
-.page-contact .ho-menu > .menu-contact,
 .page-events .ho-menu > .menu-events,
 .page-press .ho-menu > .menu-press {
   text-decoration: underline;
@@ -57,7 +55,6 @@ body {
   .bg-img {
     background-image: url(../img/_MG_6450_1440.jpg);
     background-attachment: fixed;
-    // background-position: 75% 75%;
   }
 }
 
@@ -71,27 +68,12 @@ body {
   }
 }
 
-.page-contact {
+.page-events {
   .bg-img {
     background-image: url(../img/_MG_6476_1440.jpg);
     background-attachment: fixed;
-    background-position: 0 0;
     background-size: cover;
-    background-position: 20 45%;
     font-size:32px;
-    height:600px;
-  }
-}
-
-.page-events {
-  .bg-img {
-    background-image: url(../img/_MG_6454_1440.jpg);
-    background-attachment: fixed;
-    background-position: 0 0;
-    background-size: cover;
-    background-position: 20 45%;
-    font-size:32px;
-    height:600px;
   }
 }
 
@@ -107,13 +89,12 @@ body {
 
 .bg-img {
   background-repeat: no-repeat;
-  // background-position-y: 50%;
   text-align: center;
-  padding:5% 0;
+  // padding:5% 0;
   font-weight:900;
   margin-bottom:42px;
   min-height:350px;
-  overflow: hidden;
+  // overflow: hidden;
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
