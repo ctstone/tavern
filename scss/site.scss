@@ -10,6 +10,7 @@ body {
     }
   }
   h2, .active {
+    margin-top:0;
     color:#B6212D;
   }
 }
@@ -90,11 +91,9 @@ body {
 .bg-img {
   background-repeat: no-repeat;
   text-align: center;
-  // padding:5% 0;
   font-weight:900;
   margin-bottom:42px;
   min-height:350px;
-  // overflow: hidden;
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
