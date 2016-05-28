@@ -1,6 +1,8 @@
 $(document).on('ready', function() {
   var now = moment();
   
+  $('#cp-year').text(now.year());
+  
   $('.ho-hours li').each(function() {
     var elem = $(this)
       , dateOpen = new Date()
