@@ -13,6 +13,12 @@ body {
     margin-top:0;
     color:#B6212D;
   }
+  
+  p, .ho-hours {
+    font-size: 32px;
+    font-weight:900;
+    
+  }
 }
 
 .page-menu .ho-menu > .menu-menu,
@@ -22,76 +28,73 @@ body {
   text-decoration: underline;
 }
 
-.page-home {
-  .bg-img {
-    font-size:42px;
-  }
-}
-
 .page-menu {
   .bg-img {
     background-image: url(../img/_MG_6482_1440.jpg);
-    background-position: 10% 50%;
-    background-attachment: fixed;
-    font-size:32px;
-    padding-top:0;
   }
   a:hover {
     text-decoration: none;
   }
   p {
     b {
-      font-size:32px;
+      font-size:18px;
     }
     em {
       font-style: normal;
       font-size:16px;
       display:block;
+      font-weight: normal;
     }
-    margin-bottom:25px;
+    margin-bottom:15px;
   }
 }
 
 .page-home {
   .bg-img {
     background-image: url(../img/_MG_6450_1440.jpg);
-    background-attachment: fixed;
   }
 }
 
 .page-location {
   .bg-img {
     background-image: url(../img/2016-02-18_10-14-33.jpg);
-    background-attachment: fixed;
-    background-position: 0;
-    background-size: cover;
-    font-size:32px;
+  }
+  p {
+    font-size:24px;
   }
 }
 
 .page-events {
   .bg-img {
     background-image: url(../img/_MG_6476_1440.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    font-size:32px;
+  }
+  p {
+    font-size:24px;
   }
 }
 
 .page-press {
   .bg-img {
     background-image: url(../img/_MG_6469_1440.jpg);
-    background-attachment: fixed;
-    background-position: 0 0;
-    background-size: cover;
-    font-size:32px;
+  }
+  
+  p {
+    font-size:18px;
+  }
+  
+  blockquote {
+    background-color:rgba(255, 255, 255, 0.1);
+    footer {
+      color:white;
+    }
   }
 }
 
 .bg-img {
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   text-align: center;
-  font-weight:900;
   margin-bottom:42px;
   min-height:350px;
   text-shadow:
@@ -102,6 +105,23 @@ body {
 
   h2 {
     font-size: 56px;
+  }
+}
+
+.logo-img {
+  margin-top:10px;
+  vertical-align:bottom;
+  padding-right:8px;
+  
+  @media (max-width:768px) {
+    height:45px;
+    width:auto;
+  }
+}
+.logo-txt {
+  font-size:45px;
+  @media (max-width:768px) {
+    font-size:30px;
   }
 }
 
@@ -120,9 +140,12 @@ body {
     color:#B6212D;
   }
   
-  @media (min-width: 1200px) {
-    text-align:right;
+  @media(min-width:992px) {
     margin-top:-60px;
     font-size:60px;
+  }
+  
+  @media (min-width: 768px) {
+    text-align:right;
   }
 }
