@@ -12,6 +12,10 @@ body {
   h2, .active {
     margin-top:0;
     color:#B6212D;
+    font-size: 56px;
+    @media(max-width:992px) {
+      font-size:42px;
+    }
   }
   
   p, .ho-hours {
@@ -110,9 +114,7 @@ body {
     -1px 1px 0 #000,
     1px 1px 0 #000;
 
-  h2 {
-    font-size: 56px;
-  }
+
 }
 
 .logo-img {
@@ -127,6 +129,7 @@ body {
 }
 .logo-txt {
   font-size:45px;
+  font-weight: 100;
   @media (max-width:768px) {
     font-size:30px;
   }
