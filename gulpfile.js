@@ -1,7 +1,9 @@
 var gulp = require('gulp')
   , sass = require('gulp-sass')
   , zip = require('gulp-zip')
-  , include = require('gulp-include');
+  , include = require('gulp-include')
+  , concat = require('gulp-concat')
+  , uglify = require('gulp-uglify');
 
 gulp.task('res.css', function() {
   return gulp.src('scss/**/*.scss')
@@ -9,24 +11,30 @@ gulp.task('res.css', function() {
     .pipe(gulp.dest('css', {cwd:'build'}));
 });
 
-gulp.task('res', ['res.css'], function() {
-  return gulp.src('@(img|js)/**').pipe(gulp.dest('build'));
+gulp.task('res.js', function() {
+  return gulp.src('js/**')
+    .pipe(uglify())
+    .pipe(gulp.dest('js', {cwd:'build'}));
+});
+
+gulp.task('res', ['res.css', 'res.js'], function() {
+  return gulp.src('@(img|files)/**').pipe(gulp.dest('build'));
 });
 
 gulp.task('dep.js', function() {
   return gulp.src([
-    'bootstrap/dist/js/bootstrap?(.min).js',
-    'moment/min/moment.min.js',
-    'jquery/dist/jquery?(.min).js'], {cwd:'bower_components'})
+    'jquery/dist/jquery.min.js',
+    'bootstrap/dist/js/bootstrap.min.js',
+    'moment/min/moment.min.js'], {cwd:'bower_components'})
+    .pipe(concat('scripts.js'))
 		.pipe(gulp.dest('lib/js', {cwd:'build'}));
 });
 
 gulp.task('dep.css', function() {
   return gulp.src([
-    'bootstrap/dist/css/bootstrap?(.min).css',
-    'bootstrap/dist/css/bootstrap.css.map',
-    'font-awesome/css/font-awesome?(.min).css',
-    'font-awesome/css/font-awesome.css.map'], {cwd:'bower_components'})
+    'bootstrap/dist/css/bootstrap.min.css',
+    'font-awesome/css/font-awesome.min.css'], {cwd:'bower_components'})
+    .pipe(concat('styles.css'))
 		.pipe(gulp.dest('lib/css', {cwd:'build'}));
 });
 gulp.task('dep.fonts', function() {
@@ -37,11 +45,8 @@ gulp.task('dep.fonts', function() {
 });
 gulp.task('dep', ['dep.js', 'dep.css', 'dep.fonts']);
 
-gulp.task('files', function() {
-  return gulp.src('files/**').pipe(gulp.dest('files', {cwd:'build'}))
-});
 
-gulp.task('build', ['res', 'dep', 'files'], function() {
+gulp.task('build', ['res', 'dep'], function() {
   return gulp.src('www/[^_]**')
     .pipe(include())
     .on('error', console.error)
