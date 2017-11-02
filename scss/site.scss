@@ -55,7 +55,8 @@ body {
 
 .page-home {
   .bg-img {
-    background-image: url(../img/_MG_6450_1440.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url(../img/homebg.jpg);
+    background-size: cover;
   }
 }
 
